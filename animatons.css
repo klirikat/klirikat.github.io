@@ -1,0 +1,746 @@
+/* ===========================================
+   ANIMATIONS.CSS
+   =========================================== */
+
+
+/* -------------------------------
+   PAGE LOAD
+--------------------------------*/
+
+body{
+
+opacity:0;
+
+transition:
+opacity .8s ease;
+
+}
+
+body.loaded{
+
+opacity:1;
+
+}
+
+
+/* -------------------------------
+   HEADER
+--------------------------------*/
+
+.header{
+
+transition:
+.45s ease;
+
+}
+
+.header.scrolled{
+
+top:12px;
+
+}
+
+.header.scrolled .container{
+
+background:
+rgba(255,255,255,.82);
+
+backdrop-filter:
+blur(30px);
+
+box-shadow:
+0 18px 50px rgba(0,0,0,.08);
+
+}
+
+
+/* -------------------------------
+   SCROLL APPEAR
+--------------------------------*/
+
+.hidden{
+
+opacity:0;
+
+transform:
+translateY(55px);
+
+filter:
+blur(10px);
+
+transition:
+
+opacity .9s ease,
+transform .9s ease,
+filter .9s ease;
+
+will-change:
+transform,opacity;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+filter:
+blur(0);
+
+}
+
+
+/* -------------------------------
+   STAGGER
+--------------------------------*/
+
+.card:nth-child(1){transition-delay:.05s;}
+.card:nth-child(2){transition-delay:.12s;}
+.card:nth-child(3){transition-delay:.18s;}
+.card:nth-child(4){transition-delay:.25s;}
+.card:nth-child(5){transition-delay:.32s;}
+.card:nth-child(6){transition-delay:.39s;}
+
+.review:nth-child(1){transition-delay:.1s;}
+.review:nth-child(2){transition-delay:.2s;}
+.review:nth-child(3){transition-delay:.3s;}
+
+.step:nth-child(1){transition-delay:.1s;}
+.step:nth-child(2){transition-delay:.2s;}
+.step:nth-child(3){transition-delay:.3s;}
+
+
+/* -------------------------------
+   BUTTONS
+--------------------------------*/
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+isolation:isolate;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+width:0;
+height:0;
+
+left:var(--x);
+top:var(--y);
+
+border-radius:50%;
+
+background:
+
+rgba(255,255,255,.22);
+
+transform:
+translate(-50%,-50%);
+
+transition:
+width .6s ease,
+height .6s ease;
+
+z-index:-1;
+
+}
+
+.btn:hover::before{
+
+width:420px;
+height:420px;
+
+}
+
+.btn{
+
+transition:
+
+transform .35s,
+background .35s,
+box-shadow .35s;
+
+}
+
+.btn:hover{
+
+transform:
+translateY(-5px);
+
+box-shadow:
+
+0 25px 45px rgba(169,141,118,.32);
+
+}
+
+.btn:active{
+
+transform:
+translateY(-2px);
+
+}
+
+
+/* -------------------------------
+   PHOTO
+--------------------------------*/
+
+.photo-card{
+
+transition:
+.6s ease;
+
+}
+
+.photo-card:hover{
+
+transform:
+translateY(-8px);
+
+box-shadow:
+
+0 45px 90px rgba(0,0,0,.12);
+
+}
+
+.photo-card img{
+
+transition:
+
+transform 1.2s ease,
+filter .8s ease;
+
+}
+
+.photo-card:hover img{
+
+transform:
+scale(1.06);
+
+filter:
+contrast(1.04)
+brightness(1.02);
+
+}
+
+
+/* -------------------------------
+   CARDS
+--------------------------------*/
+
+.card{
+
+transition:
+
+transform .45s,
+box-shadow .45s,
+border-color .45s;
+
+}
+
+.card:hover{
+
+box-shadow:
+
+0 35px 70px rgba(0,0,0,.10);
+
+}
+
+.card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:inherit;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(255,255,255,.15),
+
+transparent
+
+);
+
+opacity:0;
+
+transition:.4s;
+
+pointer-events:none;
+
+}
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card:hover::after{
+
+opacity:1;
+
+}
+
+
+/* -------------------------------
+   NUMBERS
+--------------------------------*/
+
+.number{
+
+transition:
+
+transform .4s,
+box-shadow .4s;
+
+}
+
+.number:hover{
+
+transform:
+translateY(-8px);
+
+box-shadow:
+
+0 28px 60px rgba(0,0,0,.09);
+
+}
+
+
+/* -------------------------------
+   REVIEWS
+--------------------------------*/
+
+.review{
+
+transition:
+
+.4s ease;
+
+}
+
+.review:hover{
+
+transform:
+
+translateY(-8px);
+
+}
+
+
+/* -------------------------------
+   FAQ
+--------------------------------*/
+
+.faq-item{
+
+transition:
+.35s;
+
+overflow:hidden;
+
+}
+
+.faq-item div{
+
+transition:
+
+max-height .45s ease,
+opacity .45s ease;
+
+opacity:.75;
+
+}
+
+.faq-item.active{
+
+box-shadow:
+
+0 25px 55px rgba(0,0,0,.08);
+
+}
+
+.faq-item.active div{
+
+opacity:1;
+
+}
+
+.faq-item button{
+
+transition:
+.3s;
+
+}
+
+.faq-item button:hover{
+
+color:var(--accent);
+
+}
+
+
+/* -------------------------------
+   NAV
+--------------------------------*/
+
+nav a{
+
+transition:
+.35s;
+
+}
+
+nav a.active{
+
+color:var(--accent);
+
+}
+
+nav a.active::after{
+
+width:100%;
+
+}
+
+
+/* -------------------------------
+   CONTACT
+--------------------------------*/
+
+.contact-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.contact-card::before{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+border-radius:50%;
+
+right:-220px;
+top:-220px;
+
+background:
+
+radial-gradient(
+
+rgba(255,255,255,.65),
+
+transparent 70%
+
+);
+
+animation:
+
+floatCircle 8s ease-in-out infinite;
+
+}
+
+.contact-card::after{
+
+content:"";
+
+position:absolute;
+
+width:300px;
+height:300px;
+
+left:-120px;
+bottom:-120px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+rgba(255,255,255,.35),
+
+transparent 70%
+
+);
+
+animation:
+
+floatCircleReverse 10s ease-in-out infinite;
+
+}
+
+
+/* -------------------------------
+   HERO BG
+--------------------------------*/
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:900px;
+height:900px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+rgba(255,255,255,.45),
+
+transparent 70%
+
+);
+
+top:-420px;
+right:-260px;
+
+animation:
+
+heroGlow 10s ease-in-out infinite;
+
+z-index:-1;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+left:-260px;
+bottom:-280px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+rgba(255,255,255,.22),
+
+transparent 70%
+
+);
+
+animation:
+
+heroGlow2 12s ease-in-out infinite;
+
+z-index:-1;
+
+}
+
+
+/* -------------------------------
+   FLOATING
+--------------------------------*/
+
+@keyframes heroGlow{
+
+0%{
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+50%{
+
+transform:
+translateY(-35px)
+scale(1.06);
+
+}
+
+100%{
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+@keyframes heroGlow2{
+
+0%{
+
+transform:
+translateX(0);
+
+}
+
+50%{
+
+transform:
+translateX(30px);
+
+}
+
+100%{
+
+transform:
+translateX(0);
+
+}
+
+}
+
+@keyframes floatCircle{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-18px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+@keyframes floatCircleReverse{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(18px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+
+/* -------------------------------
+   SCROLLBAR
+--------------------------------*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f2ece6;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--accent);
+
+border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--accent-hover);
+
+}
+
+
+/* -------------------------------
+   TEXT SELECTION
+--------------------------------*/
+
+::selection{
+
+background:
+
+rgba(169,141,118,.28);
+
+color:#2d2521;
+
+}
+
+
+/* -------------------------------
+   REDUCE MOTION
+--------------------------------*/
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none!important;
+
+transition:none!important;
+
+scroll-behavior:auto!important;
+
+}
+
+} 

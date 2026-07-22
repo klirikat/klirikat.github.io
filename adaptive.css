@@ -1,0 +1,601 @@
+/* ===========================================
+   ADAPTIVE.CSS
+   =========================================== */
+
+/* ---------- 1200 ---------- */
+
+@media (max-width:1200px){
+
+:root{
+--container:1040px;
+}
+
+.hero-grid{
+grid-template-columns:1fr 430px;
+gap:60px;
+}
+
+.hero h1{
+font-size:62px;
+}
+
+.photo-card{
+height:620px;
+}
+
+.section-head h2{
+font-size:52px;
+}
+
+.about h2{
+font-size:50px;
+}
+
+.contact-card h2{
+font-size:58px;
+}
+
+.price-card h2{
+font-size:54px;
+}
+
+}
+
+
+/* ---------- 1024 ---------- */
+
+@media (max-width:1024px){
+
+.header{
+
+top:12px;
+
+}
+
+.header .container{
+
+padding:16px 22px;
+
+}
+
+nav{
+
+gap:22px;
+
+}
+
+.hero{
+
+padding-top:150px;
+
+}
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-left{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero p{
+
+max-width:650px;
+
+}
+
+.photo-card{
+
+height:640px;
+
+max-width:520px;
+
+margin:auto;
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+text-align:center;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.steps{
+
+grid-template-columns:1fr;
+
+}
+
+.reviews-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.numbers .container{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.contact-card{
+
+padding:70px 50px;
+
+}
+
+}
+
+
+/* ---------- 768 ---------- */
+
+@media (max-width:768px){
+
+.header .container{
+
+padding:14px 18px;
+
+border-radius:24px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+.hero{
+
+padding-top:120px;
+
+padding-bottom:70px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.hero-buttons{
+
+width:100%;
+
+}
+
+.hero-buttons .btn{
+
+flex:1;
+
+}
+
+.photo-card{
+
+height:500px;
+
+}
+
+.numbers{
+
+padding:0 0 70px;
+
+}
+
+.numbers .container{
+
+grid-template-columns:1fr;
+
+}
+
+.number{
+
+padding:34px;
+
+}
+
+section{
+
+padding:80px 0;
+
+}
+
+.section-head{
+
+margin-bottom:45px;
+
+}
+
+.section-head h2{
+
+font-size:42px;
+
+}
+
+.about h2{
+
+font-size:42px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+padding:34px;
+
+}
+
+.step{
+
+padding:36px;
+
+}
+
+.price-card{
+
+padding:50px 35px;
+
+}
+
+.price-card h2{
+
+font-size:46px;
+
+}
+
+.contact-card{
+
+padding:60px 35px;
+
+}
+
+.contact-card h2{
+
+font-size:46px;
+
+}
+
+.contact-buttons{
+
+flex-direction:column;
+
+}
+
+.contact-buttons .btn{
+
+width:100%;
+
+}
+
+.footer{
+
+flex-direction:column;
+
+align-items:center;
+
+gap:10px;
+
+text-align:center;
+
+}
+
+}
+
+
+/* ---------- 540 ---------- */
+
+@media (max-width:540px){
+
+.container{
+
+width:90%;
+
+}
+
+.hero h1{
+
+font-size:39px;
+
+line-height:1.08;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.label{
+
+font-size:13px;
+
+}
+
+.photo-card{
+
+height:420px;
+
+padding:10px;
+
+border-radius:24px;
+
+}
+
+.photo-card img{
+
+border-radius:16px;
+
+}
+
+.section-tag{
+
+font-size:12px;
+
+letter-spacing:1.5px;
+
+}
+
+.section-head h2{
+
+font-size:34px;
+
+}
+
+.about h2{
+
+font-size:34px;
+
+}
+
+.number h2{
+
+font-size:42px;
+
+}
+
+.card h3{
+
+font-size:25px;
+
+}
+
+.step h3{
+
+font-size:26px;
+
+}
+
+.price-card{
+
+padding:42px 24px;
+
+border-radius:26px;
+
+}
+
+.price-card h2{
+
+font-size:38px;
+
+}
+
+.contact-card{
+
+padding:45px 24px;
+
+border-radius:26px;
+
+}
+
+.contact-card h2{
+
+font-size:38px;
+
+}
+
+.btn{
+
+width:100%;
+
+padding:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.faq-item{
+
+padding:22px;
+
+}
+
+.faq-item button{
+
+font-size:18px;
+
+}
+
+}
+
+
+/* ---------- 390 ---------- */
+
+@media (max-width:390px){
+
+.hero{
+
+padding-top:105px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.photo-card{
+
+height:360px;
+
+}
+
+.number{
+
+padding:28px;
+
+}
+
+.card{
+
+padding:26px;
+
+}
+
+.step{
+
+padding:26px;
+
+}
+
+.review{
+
+padding:26px;
+
+}
+
+.price-card{
+
+padding:35px 20px;
+
+}
+
+.contact-card{
+
+padding:35px 20px;
+
+}
+
+.logo{
+
+font-size:25px;
+
+}
+
+}
+
+
+/* ---------- большие экраны ---------- */
+
+@media (min-width:1600px){
+
+:root{
+
+--container:1400px;
+
+}
+
+.hero-grid{
+
+grid-template-columns:1fr 620px;
+
+gap:120px;
+
+}
+
+.hero h1{
+
+font-size:88px;
+
+}
+
+.photo-card{
+
+height:820px;
+
+}
+
+.section-head h2{
+
+font-size:72px;
+
+}
+
+.about h2{
+
+font-size:70px;
+
+}
+
+.contact-card h2{
+
+font-size:76px;
+
+}
+
+.price-card h2{
+
+font-size:72px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.price-grid{
+
+grid-template-columns:1fr;
+
+}
+
+} 
