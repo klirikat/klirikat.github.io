@@ -360,20 +360,13 @@ padding-bottom:120px;
 
 .hero-grid{
 
-display:flex;
-flex-direction:column;
+display:grid;
 
-}
+grid-template-columns:1fr 530px;
 
-.hero-content{
+gap:90px;
 
-order:1;
-
-}
-
-.hero-image{
-
-order:2;
+align-items:center;
 
 }
 
